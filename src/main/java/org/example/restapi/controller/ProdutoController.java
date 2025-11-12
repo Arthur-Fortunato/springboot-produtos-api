@@ -24,6 +24,11 @@ public class ProdutoController {
        return produtosService.listarTodosProdutos();
    }
 
+   @GetMapping("{id}")
+    public Produto listarProdutoPorId(@PathVariable Long id){
+       return produtosService.listarProdutoPorId(id);
+   }
+
    @PutMapping("{id}")
    public void atualizarProduto(Long id, Produto produto){
        produtosService.atualizar(id, produto);
