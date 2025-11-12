@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController("/produtos")
+@RestController
+@RequestMapping("/produtos")
 public class ProdutoController {
    private final ProdutoService produtosService;
 
@@ -15,7 +16,7 @@ public class ProdutoController {
    }
 
    @PostMapping
-   public void criarProduto(Produto produto){
+   public void criarProduto(@RequestBody Produto produto){
        produtosService.criar(produto);
    }
 
@@ -30,12 +31,12 @@ public class ProdutoController {
    }
 
    @PutMapping("{id}")
-   public void atualizarProduto(Long id, Produto produto){
+   public void atualizarProduto(@PathVariable Long id, @RequestBody Produto produto){
        produtosService.atualizar(id, produto);
    }
 
    @DeleteMapping("{id}")
-   public void deletarProduto(Long id){
+   public void deletarProduto(@PathVariable Long id){
        produtosService.deletar(id);
    }
 }
