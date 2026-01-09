@@ -10,7 +10,7 @@ O projeto foi construído usando tecnologias modernas e amplamente utilizadas:
 
 | Categoria | Tecnologia | Versão Principal |
 | :--- | :--- | :--- |
-| **Linguagem** | Java | 17+ (recomendada) |
+| **Linguagem** | Java | 17+ |
 | **Framework** | Spring Boot | Última Estável |
 | **Web** | Spring Web | Integrado |
 | **Persistência** | Spring Data JPA | Integrado |
